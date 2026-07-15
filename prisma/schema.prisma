@@ -29,11 +29,12 @@ model Session {
 }
 
 model Project {
-  id     String @id @default(cuid())
-  name   String
-  userId String
-  user   User   @relation(fields: [userId], references: [id])
-  tasks  Task[] 
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  tasks       Task[]
 }
 
 model Task {

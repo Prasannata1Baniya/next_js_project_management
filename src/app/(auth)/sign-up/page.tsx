@@ -28,7 +28,7 @@ export default function SignUpPage() {
               autoComplete="name"
               required
               placeholder="Enter your name"
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-orange-500"
+             className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-orange-500"
             />
           </div>
 
@@ -46,7 +46,7 @@ export default function SignUpPage() {
               autoComplete="email"
               required
               placeholder="Enter your email"
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-orange-500"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-orange-500"
             />
           </div>
 
@@ -66,7 +66,7 @@ export default function SignUpPage() {
                required
               minLength={6}
               placeholder="Enter your password"
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-orange-500"
+             className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-orange-500"
             />
           </div>
 
