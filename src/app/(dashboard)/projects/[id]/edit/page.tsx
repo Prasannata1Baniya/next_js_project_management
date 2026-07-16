@@ -6,9 +6,11 @@ import {
 export default async function EditProjectPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const project = await getProjectById(params.id);
+  const { id } = await params;
+
+  const project = await getProjectById(id);
 
   if (!project) {
     return <p>Project not found.</p>;
@@ -17,7 +19,7 @@ export default async function EditProjectPage({
   return (
     <div className="mx-auto max-w-2xl">
       <div className="rounded-xl bg-white p-8 shadow">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-3xl text-gray-900 font-bold">
           Edit Project
         </h1>
 
@@ -26,23 +28,23 @@ export default async function EditProjectPage({
           className="mt-8 space-y-6"
         >
           <div>
-            <label>Project Name</label>
+            <label className="text-gray-500">Project Name</label>
 
             <input
               name="name"
               defaultValue={project.name}
-              className="w-full rounded-lg border px-4 py-3"
+              className="w-full rounded-lg text-gray-900 border px-4 py-3"
             />
           </div>
 
           <div>
-            <label>Description</label>
+             <label className="text-gray-500">Description</label>
 
             <textarea
               name="description"
               defaultValue={project.description ?? ""}
               rows={5}
-              className="w-full rounded-lg border px-4 py-3"
+              className="w-full text-gray-900 rounded-lg border px-4 py-3"
             />
           </div>
 
