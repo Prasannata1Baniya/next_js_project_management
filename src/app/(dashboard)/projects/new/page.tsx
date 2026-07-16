@@ -1,3 +1,5 @@
+import { createProject } from "@/actions/projects";
+
 export default function NewProjectPage() {
   return (
     <div className="mx-auto max-w-2xl">
@@ -10,7 +12,7 @@ export default function NewProjectPage() {
           Create a new project to start managing your tasks.
         </p>
 
-        <form className="mt-8 space-y-6">
+        <form action={createProject} className="mt-8 space-y-6">
 
           <div>
             <label
